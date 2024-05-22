@@ -1,0 +1,20 @@
+.container {  display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 0.3fr 2.3fr 0.4fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Header"
+      "Game Game"
+      "Store-ToolUps Store-ToolUps"
+      "Footer Footer";
+  }
+  
+  .Header { grid-area: Header; }
+  
+  .Game { grid-area: Game; }
+  
+  .Store\/ToolUps { grid-area: Store-ToolUps; }
+  
+  .Footer { grid-area: Footer; }
+  

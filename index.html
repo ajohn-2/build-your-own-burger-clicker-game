@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="burger.js">
+
+    <title>Mini Burger Clicker</title>
+
+    <style>
+    .container {  display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-rows: 0.3fr 2.3fr 0.4fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "Header Header"
+          "Game Store-ToolUps"
+          "Footer Footer";
+        height: 100vh;
+
+      }
+      
+      .Header 
+        { 
+        grid-area: Header; 
+        background-color: lightgoldenrodyellow;
+    }
+      
+      .Game 
+        { 
+        grid-area: Game;
+        background-color: lightgreen;
+
+        }
+      
+      .Store-ToolUps 
+        { 
+        
+        grid-area: Store-ToolUps;
+        background-color: lightcoral;
+    
+    }
+      
+      .Footer 
+      { 
+        grid-area: Footer; 
+        background-color: lightgoldenrodyellow;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="Header"> 
+            <h1>Burger Bash: Click and Eat!</h1>
+            
+        </div>
+       
+       
+        <div class="Game">
+            <h2 id="pointsTracker">0 Burgers Built</h2>
+            <button onclick="increasePoints()">
+                <img src="images/burger.jpeg" alt="" width="150">
+            </button>
+            <script>
+                let points = 0;
+                let pointsTracker = document.getElementById("pointsTracker")
+                let condiments = 0
+                
+
+
+
+                function increasePoints (){
+                    points = points + 1;
+
+                    pointsTracker.innerText = points + "Burger Points"
+                }
+
+            
+            </script>
+
+        </div>
+        <div class="Store-ToolUps">
+            <h2 class="text-center">Store/Upgrades</h2>
+            
+            <img src="images/ketchup:mustard.jpeg" alt="Add Ketchup and Mustard Upgrade" wdith="68" height="80">
+            <button>
+                Buy Condiments (Cost: 7 Burgers Built)
+            </button>
+            <br>
+            <h4>0 Condiments Purchased</h4>
+            
+            <img src="images/addlettuce.jpeg" alt="Add Lettuce Upgrade" width="68">
+            <button>
+                Buy Extra Lettuce (Cost: 25 Burgers Built)
+            </button>
+            <br>
+            <h4>0 Extra Lettuce Purchased</h4>
+
+            <img src="images/cartoonfries.jpeg" alt="Add Fries" width="68">
+            <button>
+                Buy Fries With Burger (Cost: 100 Burgers Built)
+            </button>
+            <br>
+            <h4>0 Fries Purchased</h4>
+            
+            <img src="images/onionringsburger.avif" alt="Add Onion Rings Upgrades" width="68">
+            <button>
+                Buy Onion Rings (Cost: 250 Burgers Built)
+            </button>
+            <br>
+            <h4>0 Onion Rings Purchased</h4>
+            
+
+            
+
+            
+
+        </div>
+        <div class="Footer"></div>
+      </div>
+
+      <script src="game.js"></script>
+</body>
+</html>
