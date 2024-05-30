@@ -12,4 +12,3 @@ function addCondiments() {
         alert("You dont have enough burgers built!")
     }
 }
-

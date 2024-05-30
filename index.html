@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="burger.css">
     <link rel="stylesheet" href="burger.js">
 
-    <title>Mini Burger Clicker</title>
+    <title>Burger Clicker</title>
 
     <style>
     .container {  display: grid;
@@ -55,7 +55,7 @@
 <body>
     <div class="container">
         <div class="Header"> 
-            <h1>Burger Bash: Click and Eat!</h1>
+            <h1 class="text-center"> Burger Bash: Click and Eat!</h1>
             
         </div>
        
@@ -63,15 +63,13 @@
         <div class="Game">
             <h2 id="pointsTracker">0 Burgers Built</h2>
             <button onclick="increasePoints()">
-                <img src="images/burger.jpeg" alt="" width="150">
+                <img src="images/pixil-frame-0 (3).png" alt="" width="150">
             </button>
             <script>
                 let points = 0;
                 let pointsTracker = document.getElementById("pointsTracker")
                 let condiments = 0
                 
-
-
 
                 function increasePoints (){
                     points = points + 1;
@@ -86,33 +84,59 @@
         <div class="Store-ToolUps">
             <h2 class="text-center">Store/Upgrades</h2>
             
-            <img src="images/ketchup:mustard.jpeg" alt="Add Ketchup and Mustard Upgrade" wdith="68" height="80">
-            <button>
-                Buy Condiments (Cost: 7 Burgers Built)
+            <img src="images/pixil-frame-0.png" alt="Add Ketchup and Mustard Upgrade" wdith="68" height="80">
+            <button onlick="Condiments">
+                Buy Condiments (Cost: 5 Burgers Built)
             </button>
             <br>
             <h4>0 Condiments Purchased</h4>
+            <script>
+                function Condiments() {
+                  document.getElementById("myBtn").disabled = true;
+                }
+                
+            </script>
             
-            <img src="images/addlettuce.jpeg" alt="Add Lettuce Upgrade" width="68">
-            <button>
+            <img src="images/pixil-frame-0 (1).png" alt="Add Lettuce Upgrade" width="68">
+            <button onclick="extraLettuce">
                 Buy Extra Lettuce (Cost: 25 Burgers Built)
             </button>
             <br>
             <h4>0 Extra Lettuce Purchased</h4>
+            <script>
+                function extraLettuce() {
+                  document.getElementById("myBtn").disabled = true;
+                }
+                
+            </script>
 
-            <img src="images/cartoonfries.jpeg" alt="Add Fries" width="68">
-            <button>
-                Buy Fries With Burger (Cost: 100 Burgers Built)
+            <img src="images/pixil-frame-0 (2).png" alt="Add Fries" width="52" height="50">
+            <button onclick="extraFries()">
+             Buy Fries (Special Deal) (Cost: 100 Burgers Built)
             </button>
             <br>
             <h4>0 Fries Purchased</h4>
+            <script>
+                function extraFries() {
+                  document.getElementById("myBtn").disabled = true;
+                }
+                
+            </script>
             
-            <img src="images/onionringsburger.avif" alt="Add Onion Rings Upgrades" width="68">
-            <button>
+            <img src="images/pixil-frame-0 (4).png" alt="Add Onion Rings Upgrades" width="68">
+            <button onclick="onionRings()">
                 Buy Onion Rings (Cost: 250 Burgers Built)
             </button>
             <br>
             <h4>0 Onion Rings Purchased</h4>
+            <script>
+                function onionRings() {
+                  document.getElementById("myBtn").disabled = true;
+                }
+                
+            </script>
+
+
             
 
             
